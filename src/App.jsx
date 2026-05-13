@@ -1,3 +1,5 @@
+import React from 'react'
+
 function App() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '40px' }}>
