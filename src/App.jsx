@@ -46,6 +46,9 @@ function App() {
         <h2>Visit Us</h2>
         <p>Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar, Odisha 751019</p>
         <p>📞 06744065359 | ✉️ saidentalcare2012@gmail.com</p>
+        <a href="https://maps.app.goo.gl/T6ppH64dH3G8jp5WA?g_st=ic" style={{ color: '#0284c7', fontWeight: 'bold', textDecoration: 'none' }}>
+          View Clinic on Google Maps
+        </a>
       </section>
 
       <footer style={{ backgroundColor: '#0f172a', color: 'white', textAlign: 'center', padding: '20px' }}>
