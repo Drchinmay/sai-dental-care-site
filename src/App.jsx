@@ -34,6 +34,24 @@ function App() {
         </div>
       </section>
 
+      <section style={{ padding: '60px 40px', backgroundColor: 'white' }}>
+        <h2 style={{ textAlign: 'center' }}>Gallery</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '20px', marginTop: '30px' }}>
+          {[
+            'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5',
+            'https://images.unsplash.com/photo-1606811841689-23dfddce3e95',
+            'https://images.unsplash.com/photo-1629909615184-74f495363b67'
+          ].map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt="Dental Clinic"
+              style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }}
+            />
+          ))}
+        </div>
+      </section>
+
       <section style={{ padding: '60px 40px', textAlign: 'center' }}>
         <h2>Patient Testimonials</h2>
         <p>⭐️⭐️⭐️⭐️⭐️ Trusted by hundreds of happy smiles.</p>
