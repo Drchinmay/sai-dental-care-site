@@ -1,89 +1,208 @@
-import React from 'react';
+import React from "react";
 
 function App() {
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, color: '#1e293b', backgroundColor: '#f8fafc' }}>
-      <header style={{ backgroundColor: '#0284c7', color: 'white', padding: '20px 50px', position: 'sticky', top: 0, zIndex: 1000, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h1
-  style={{
-    fontSize: '56px',
-    fontWeight: '800',
-    letterSpacing: '1px',
-    lineHeight: '1.2',
-    marginBottom: '20px',
-    fontFamily: "'Poppins', 'Segoe UI', sans-serif",
-    textShadow: '0 4px 20px rgba(0,0,0,0.3)',
-  }}
->
-  Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
-</h1>
-        <a href="https://wa.me/919439630471" style={{ background: 'white', color: '#0284c7', padding: '12px 20px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold' }}>Book Now</a>
+    <div style={{ fontFamily: "'Poppins', sans-serif", margin: 0 }}>
+
+      {/* HEADER */}
+      <header
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "15px 40px",
+          backgroundColor: "#0284c7",
+          color: "white",
+          position: "sticky",
+          top: 0,
+          zIndex: 1000,
+        }}
+      >
+        <h2 style={{ margin: 0 }}>Sai Dental Care</h2>
+
+        <a
+          href="https://wa.me/919439630471"
+          style={{
+            background: "white",
+            color: "#0284c7",
+            padding: "10px 18px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          Book Appointment
+        </a>
       </header>
 
-      <section style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')", backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '90vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: 'white', padding: '30px' }}>
-        <div style={{ backgroundColor: 'rgba(0,0,0,0.55)', padding: '50px', borderRadius: '20px', maxWidth: '850px' }}>
-          <h2 style={{ fontSize: '56px' }}>Crafting Beautiful & Healthy Smiles</h2>
-          <p style={{ fontSize: '22px' }}>Advanced dental care with modern technology, expert hands, and compassionate treatment.</p>
-          <a href="https://wa.me/919439630471" style={{ display: 'inline-block', marginTop: '20px', backgroundColor: '#0284c7', color: 'white', padding: '15px 28px', borderRadius: '12px', textDecoration: 'none', fontWeight: 'bold' }}>Schedule Appointment</a>
+      {/* HERO SECTION */}
+      <section
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "90vh",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          color: "white",
+          padding: "20px",
+        }}
+      >
+        {/* Overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,0.6)",
+            backdropFilter: "blur(5px)",
+          }}
+        />
+
+        {/* HERO CONTENT */}
+        <div style={{ position: "relative", maxWidth: "900px", zIndex: 2 }}>
+          
+          {/* H1 (SEO MAIN TITLE) */}
+          <h1
+            style={{
+              fontSize: "52px",
+              fontWeight: "800",
+              marginBottom: "20px",
+              lineHeight: "1.2",
+            }}
+          >
+            Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
+          </h1>
+
+          <p style={{ fontSize: "20px", marginBottom: "25px" }}>
+            Gentle treatment. Modern technology. Confident smiles.
+          </p>
+
+          <a
+            href="https://wa.me/919439630471"
+            style={{
+              backgroundColor: "#0ea5e9",
+              color: "white",
+              padding: "14px 26px",
+              borderRadius: "10px",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            Book Your Visit
+          </a>
         </div>
       </section>
 
-      <section style={{ padding: '60px 40px', textAlign: 'center' }}>
+      {/* WHY CHOOSE US */}
+      <section style={{ padding: "60px 20px", textAlign: "center" }}>
         <h2>Why Choose Sai Dental Care?</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: '20px', marginTop: '30px' }}>
-          {['Modern Equipment', 'Experienced Dentists', 'Pain-Free Procedures', 'Hygienic Environment'].map((item) => (
-            <div key={item} style={{ background: 'white', padding: '25px', borderRadius: '16px', boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }}>{item}</div>
-          ))}
-        </div>
-      </section>
 
-      <section style={{ padding: '60px 40px', backgroundColor: 'white' }}>
-        <h2 style={{ textAlign: 'center' }}>Our Services</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: '20px', marginTop: '30px' }}>
-          {['Root Canal', 'Dental Implants', 'Braces & Aligners', 'Teeth Whitening', 'Smile Makeover', 'General Dentistry'].map((service) => (
-            <div key={service} style={{ padding: '25px', borderRadius: '16px', backgroundColor: '#f8fafc', boxShadow: '0 4px 12px rgba(0,0,0,0.06)' }}>{service}</div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ padding: '60px 40px', backgroundColor: 'white' }}>
-        <h2 style={{ textAlign: 'center' }}>Gallery</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '20px', marginTop: '30px' }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+            gap: "20px",
+            marginTop: "30px",
+          }}
+        >
           {[
-            'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5',
-            'https://images.unsplash.com/photo-1606811841689-23dfddce3e95',
-            'https://images.unsplash.com/photo-1629909615184-74f495363b67'
-          ].map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt="Dental Clinic"
-              style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }}
-            />
+            "Painless Treatment",
+            "Experienced Dentists",
+            "Modern Equipment",
+            "Hygienic Clinic",
+          ].map((item) => (
+            <div
+              key={item}
+              style={{
+                padding: "20px",
+                background: "#f8fafc",
+                borderRadius: "12px",
+              }}
+            >
+              {item}
+            </div>
           ))}
         </div>
       </section>
 
-      <section style={{ padding: '60px 40px', textAlign: 'center' }}>
-        <h2>Patient Testimonials</h2>
-        <p>⭐️⭐️⭐️⭐️⭐️ Trusted by hundreds of happy smiles.</p>
-        <div style={{ maxWidth: '800px', margin: '20px auto', background: 'white', padding: '30px', borderRadius: '18px', boxShadow: '0 6px 18px rgba(0,0,0,0.08)' }}>
-          <p>“Excellent service, painless treatment, and caring doctors. Highly recommended!”</p>
+      {/* SERVICES */}
+      <section
+        style={{ padding: "60px 20px", background: "#f1f5f9", textAlign: "center" }}
+      >
+        <h2>Our Dental Services</h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+            gap: "20px",
+            marginTop: "30px",
+          }}
+        >
+          {[
+            "Root Canal",
+            "Dental Implants",
+            "Braces",
+            "Teeth Whitening",
+            "Smile Design",
+            "General Dentistry",
+          ].map((s) => (
+            <div
+              key={s}
+              style={{
+                background: "white",
+                padding: "20px",
+                borderRadius: "12px",
+              }}
+            >
+              {s}
+            </div>
+          ))}
         </div>
       </section>
 
-      <section style={{ padding: '60px 40px', backgroundColor: 'white', textAlign: 'center' }}>
-        <h2>Visit Us</h2>
-        <p>Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar, Odisha 751019</p>
+      {/* TESTIMONIALS */}
+      <section style={{ padding: "60px 20px", textAlign: "center" }}>
+        <h2>Patient Testimonials</h2>
+
+        <div
+          style={{
+            maxWidth: "700px",
+            margin: "30px auto",
+            background: "#fff",
+            padding: "25px",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+          }}
+        >
+          “Very painless treatment and friendly doctors. Highly recommended!”
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        style={{ padding: "60px 20px", background: "#0f172a", color: "white", textAlign: "center" }}
+      >
+        <h2>Visit Sai Dental Care</h2>
+
+        <p>
+          Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar
+        </p>
+
         <p>📞 06744065359 | ✉️ saidentalcare2012@gmail.com</p>
-        <a href="https://maps.app.goo.gl/T6ppH64dH3G8jp5WA?g_st=ic" style={{ color: '#0284c7', fontWeight: 'bold', textDecoration: 'none' }}>
-          View Clinic on Google Maps
+
+        <a
+          href="https://maps.app.goo.gl/T6ppH64dH3G8jp5WA?g_st=ic"
+          style={{ color: "#38bdf8", textDecoration: "none", fontWeight: "bold" }}
+        >
+          View on Google Maps
         </a>
       </section>
 
-      <footer style={{ backgroundColor: '#0f172a', color: 'white', textAlign: 'center', padding: '20px' }}>
-        <p>© 2026 Sai Dental Care. All Rights Reserved.</p>
-      </footer>
     </div>
   );
 }
