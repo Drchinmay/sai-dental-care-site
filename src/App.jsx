@@ -71,7 +71,7 @@ function App() {
       </section>
 
       <section id="testimonials" style={{ padding: '60px 40px' }}>
-        <h2 style={{ textAlign: 'center' }}>Patient Testimonials</h2>
+        <h2 style={{ textAlign: 'center' }}>Testimonials</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '20px', marginTop: '30px' }}>
           {[
             'Excellent service and painless treatment. Highly recommended!',
@@ -88,11 +88,11 @@ function App() {
 
       <section id="gallery" style={{ padding: '60px 40px', backgroundColor: '#f8fafc' }}>
         <h2 style={{ textAlign: 'center' }}>Gallery</h2>
-        <p style={{ textAlign: 'center' }}>Clinic photos and smile transformations coming soon.</p>
+        <p style={{ textAlign: 'center' }}>Explore our modern clinic interiors, advanced dental equipment, hygiene standards, and smile transformation journey. Add your real clinic photos here for a stronger patient connection.</p>
       </section>
 
       <section id="contact" style={{ padding: '60px 40px' }}>
-        <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
+        <h2 style={{ textAlign: 'center' }}>Contact & Appointment</h2>
         <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
           <p>📞 06744065359</p>
           <p>✉️ saidentalcare2012@gmail.com</p>
