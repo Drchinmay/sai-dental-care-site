@@ -4,7 +4,9 @@ function App() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', margin: 0, color: '#1e293b', backgroundColor: '#f8fafc' }}>
       <header style={{ backgroundColor: '#0284c7', color: 'white', padding: '20px 50px', position: 'sticky', top: 0, zIndex: 1000, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <h1>Sai Dental Care</h1>
+        <h1 style={{ fontSize: '56px' }}>
+  Dentist in Bhubaneswar – Sai Dental Care
+</h1>
         <a href="https://wa.me/919439630471" style={{ background: 'white', color: '#0284c7', padding: '12px 20px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold' }}>Book Now</a>
       </header>
 
