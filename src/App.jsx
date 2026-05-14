@@ -1,9 +1,17 @@
 import React from "react";
 
 function App() {
+  const inputStyle = {
+    padding: "14px",
+    borderRadius: "10px",
+    border: "1px solid #cbd5e1",
+    fontSize: "16px",
+    outline: "none",
+  };
+
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif", margin: 0 }}>
-
+      
       {/* FLOATING WHATSAPP ICON */}
       <a
         href="https://wa.me/919439630471"
@@ -81,7 +89,6 @@ function App() {
           padding: "20px",
         }}
       >
-        {/* overlay */}
         <div
           style={{
             position: "absolute",
@@ -91,7 +98,6 @@ function App() {
           }}
         />
 
-        {/* glass card */}
         <div
           style={{
             position: "relative",
@@ -116,7 +122,7 @@ function App() {
               marginBottom: "20px",
             }}
           >
-            Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
+            Painless & Advanced Dental Care in Bhubaneswar
           </h1>
 
           <p style={{ fontSize: "20px", marginBottom: "30px", opacity: 0.9 }}>
@@ -231,79 +237,68 @@ function App() {
           “One of the best dental clinics in Bhubaneswar. Very painless treatment and friendly doctors.”
         </div>
       </section>
+
       {/* APPOINTMENT FORM */}
-<section
-  style={{
-    padding: "70px 20px",
-    background: "#f8fafc",
-    textAlign: "center",
-  }}
->
-  <h2 style={{ marginBottom: "15px" }}>Book an Appointment</h2>
-  <p style={{ marginBottom: "30px", color: "#475569" }}>
-    Schedule your dental consultation with Sai Dental Care
-  </p>
+      <section
+        style={{
+          padding: "70px 20px",
+          background: "#f8fafc",
+          textAlign: "center",
+        }}
+      >
+        <h2 style={{ marginBottom: "15px" }}>Book an Appointment</h2>
+        <p style={{ marginBottom: "30px", color: "#475569" }}>
+          Schedule your dental consultation with Sai Dental Care
+        </p>
 
-  <form
-    style={{
-      maxWidth: "600px",
-      margin: "0 auto",
-      display: "flex",
-      flexDirection: "column",
-      gap: "15px",
-      background: "white",
-      padding: "35px",
-      borderRadius: "18px",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
-    }}
-  >
-    <input
-      type="text"
-      placeholder="Patient Name"
-      style={inputStyle}
-    />
+        <form
+          style={{
+            maxWidth: "600px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "15px",
+            background: "white",
+            padding: "35px",
+            borderRadius: "18px",
+            boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+          }}
+        >
+          <input type="text" placeholder="Patient Name" style={inputStyle} />
+          <input type="tel" placeholder="Phone Number" style={inputStyle} />
+          <input type="date" style={inputStyle} />
 
-    <input
-      type="tel"
-      placeholder="Phone Number"
-      style={inputStyle}
-    />
+          <select style={inputStyle}>
+            <option>Select Treatment</option>
+            <option>Root Canal</option>
+            <option>Dental Implant</option>
+            <option>Braces / Aligners</option>
+            <option>Teeth Whitening</option>
+            <option>General Consultation</option>
+          </select>
 
-    <input
-      type="date"
-      style={inputStyle}
-    />
+          <textarea
+            rows="4"
+            placeholder="Additional Notes"
+            style={inputStyle}
+          />
 
-    <select style={inputStyle}>
-      <option>Select Treatment</option>
-      <option>Root Canal</option>
-      <option>Dental Implant</option>
-      <option>Braces / Aligners</option>
-      <option>Teeth Whitening</option>
-      <option>General Consultation</option>
-    </select>
+          <a
+            href="https://wa.me/919439630471"
+            style={{
+              background: "#0284c7",
+              color: "white",
+              padding: "14px",
+              borderRadius: "12px",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            Confirm Booking on WhatsApp
+          </a>
+        </form>
+      </section>
 
-    <textarea
-      rows="4"
-      placeholder="Additional Notes"
-      style={inputStyle}
-    />
-
-    <a
-      href="https://wa.me/919439630471"
-      style={{
-        background: "#0284c7",
-        color: "white",
-        padding: "14px",
-        borderRadius: "12px",
-        textDecoration: "none",
-        fontWeight: "bold",
-      }}
-    >
-      Confirm Booking on WhatsApp
-    </a>
-  </form>
-</section>
       {/* CONTACT */}
       <section
         style={{
