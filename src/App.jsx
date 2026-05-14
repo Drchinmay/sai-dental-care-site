@@ -231,7 +231,79 @@ function App() {
           “One of the best dental clinics in Bhubaneswar. Very painless treatment and friendly doctors.”
         </div>
       </section>
+      {/* APPOINTMENT FORM */}
+<section
+  style={{
+    padding: "70px 20px",
+    background: "#f8fafc",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ marginBottom: "15px" }}>Book an Appointment</h2>
+  <p style={{ marginBottom: "30px", color: "#475569" }}>
+    Schedule your dental consultation with Sai Dental Care
+  </p>
 
+  <form
+    style={{
+      maxWidth: "600px",
+      margin: "0 auto",
+      display: "flex",
+      flexDirection: "column",
+      gap: "15px",
+      background: "white",
+      padding: "35px",
+      borderRadius: "18px",
+      boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+    }}
+  >
+    <input
+      type="text"
+      placeholder="Patient Name"
+      style={inputStyle}
+    />
+
+    <input
+      type="tel"
+      placeholder="Phone Number"
+      style={inputStyle}
+    />
+
+    <input
+      type="date"
+      style={inputStyle}
+    />
+
+    <select style={inputStyle}>
+      <option>Select Treatment</option>
+      <option>Root Canal</option>
+      <option>Dental Implant</option>
+      <option>Braces / Aligners</option>
+      <option>Teeth Whitening</option>
+      <option>General Consultation</option>
+    </select>
+
+    <textarea
+      rows="4"
+      placeholder="Additional Notes"
+      style={inputStyle}
+    />
+
+    <a
+      href="https://wa.me/919439630471"
+      style={{
+        background: "#0284c7",
+        color: "white",
+        padding: "14px",
+        borderRadius: "12px",
+        textDecoration: "none",
+        fontWeight: "bold",
+      }}
+    >
+      Confirm Booking on WhatsApp
+    </a>
+  </form>
+</section>
       {/* CONTACT */}
       <section
         style={{
