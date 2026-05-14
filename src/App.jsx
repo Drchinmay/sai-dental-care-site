@@ -4,24 +4,35 @@ function App() {
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif", margin: 0 }}>
 
-      {/* FLOATING WHATSAPP BUTTON */}
+      {/* FLOATING WHATSAPP ICON */}
       <a
         href="https://wa.me/919439630471"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           position: "fixed",
           bottom: "20px",
           right: "20px",
           background: "#25D366",
-          color: "white",
-          padding: "14px 18px",
-          borderRadius: "50px",
-          textDecoration: "none",
-          fontWeight: "bold",
-          boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
+          width: "60px",
+          height: "60px",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 10px 25px rgba(0,0,0,0.25)",
           zIndex: 1000,
         }}
       >
-        WhatsApp
+        <img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+          alt="WhatsApp"
+          style={{
+            width: "30px",
+            height: "30px",
+            filter: "invert(1)",
+          }}
+        />
       </a>
 
       {/* HEADER */}
@@ -55,7 +66,7 @@ function App() {
         </a>
       </header>
 
-      {/* HERO - ULTRA PREMIUM GLASS STYLE */}
+      {/* HERO SECTION */}
       <section
         style={{
           backgroundImage:
@@ -105,7 +116,7 @@ function App() {
               marginBottom: "20px",
             }}
           >
-            Painless & Advanced Dental Care in Bhubaneswar
+            Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
           </h1>
 
           <p style={{ fontSize: "20px", marginBottom: "30px", opacity: 0.9 }}>
