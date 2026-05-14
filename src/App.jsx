@@ -277,21 +277,74 @@ Notes: ${notes}`
       </section>
 
       {/* TESTIMONIAL */}
-      <section style={{ padding: "70px 20px", textAlign: "center" }}>
-        <h2>Happy Patients</h2>
-        <div
-          style={{
-            maxWidth: "750px",
-            margin: "30px auto",
-            padding: "30px",
-            borderRadius: "16px",
-            background: "white",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-          }}
-        >
-          “One of the best dental clinics in Bhubaneswar. Very painless treatment and friendly doctors.”
-        </div>
-      </section>
+      {/* PATIENT REVIEWS */}
+<section
+  style={{
+    padding: "70px 20px",
+    textAlign: "center",
+    background: "#f8fafc",
+  }}
+>
+  <h2 style={{ marginBottom: "12px" }}>What Our Patients Say</h2>
+  <p style={{ color: "#64748b", marginBottom: "35px" }}>
+    Trusted by families across Bhubaneswar
+  </p>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+      gap: "25px",
+      maxWidth: "1100px",
+      margin: "0 auto",
+    }}
+  >
+    <div
+      style={{
+        background: "white",
+        padding: "28px",
+        borderRadius: "18px",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+        textAlign: "left",
+      }}
+    >
+      <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
+
+      <p style={{ color: "#334155", lineHeight: "1.8" }}>
+        Very nice and calm environment to have your treatment. Interiors
+        are clean and ambience is good. Doctors are very professional and
+        well behaved. I did my teeth filling under Dr Itishree ma’am.
+        Her behaviour was very polite and good.
+      </p>
+
+      <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
+        Santoshi Kusiya
+      </h4>
+    </div>
+
+    <div
+      style={{
+        background: "white",
+        padding: "28px",
+        borderRadius: "18px",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+        textAlign: "left",
+      }}
+    >
+      <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
+
+      <p style={{ color: "#334155", lineHeight: "1.8" }}>
+        It was an amazing experience with Sai Dental Care. Dr Chinmaya
+        Nayak and his staff were very helpful, and my root canal
+        treatment was successful.
+      </p>
+
+      <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
+        Debasish Pasupalak
+      </h4>
+    </div>
+  </div>
+</section>
 
       {/* APPOINTMENT FORM */}
       <section
