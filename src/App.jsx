@@ -438,9 +438,9 @@ Notes: ${notes}`
 >
   <iframe
     title="Sai Dental Care Location"
-    src="https://www.google.com/maps?q=20.2509,85.7795&z=18&output=embed"
-    width="600"
-    height="250"
+    src="https://www.google.com/maps?q=Plot%20no%2079%20K-7%20Ghatikia%20Main%20Road%20Kalinganagar%20Bhubaneswar&z=18&output=embed"
+    width="550"
+    height="230"
     style={{
       border: 0,
       borderRadius: "16px",
