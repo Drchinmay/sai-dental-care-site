@@ -318,7 +318,7 @@ Notes: ${notes}`
       </p>
 
       <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
-        Santoshi Kusiya
+        Santoshi
       </h4>
     </div>
 
@@ -340,7 +340,7 @@ Notes: ${notes}`
       </p>
 
       <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
-        Debasish Pasupalak
+        Debasish
       </h4>
     </div>
   </div>
