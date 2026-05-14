@@ -124,24 +124,15 @@ Notes: ${notes}`
             background: "rgba(255,255,255,0.10)",
             border: "1px solid rgba(255,255,255,0.2)",
             backdropFilter: "blur(18px)",
-            WebkitBackdropFilter: "blur(18px)",
             textAlign: "center",
             color: "white",
-            boxShadow: "0 10px 40px rgba(0,0,0,0.35)",
           }}
         >
-          <h1
-            style={{
-              fontSize: "54px",
-              fontWeight: "900",
-              lineHeight: "1.2",
-              marginBottom: "20px",
-            }}
-          >
+          <h1 style={{ fontSize: "54px", fontWeight: "900" }}>
             Painless & Advanced Dental Care in Bhubaneswar
           </h1>
 
-          <p style={{ fontSize: "20px", marginBottom: "30px", opacity: 0.9 }}>
+          <p style={{ fontSize: "20px", marginBottom: "30px" }}>
             Modern dentistry. Gentle hands. Confident smiles for life.
           </p>
 
@@ -154,7 +145,6 @@ Notes: ${notes}`
               color: "white",
               textDecoration: "none",
               fontWeight: "bold",
-              boxShadow: "0 8px 25px rgba(14,165,233,0.4)",
             }}
           >
             Book Your Consultation
@@ -236,10 +226,59 @@ Notes: ${notes}`
         </div>
       </section>
 
+      {/* GALLERY */}
+      <section
+        style={{
+          padding: "70px 20px",
+          background: "white",
+          textAlign: "center",
+        }}
+      >
+        <h2>Our Clinic Gallery</h2>
+        <p style={{ marginBottom: "35px", color: "#64748b" }}>
+          Take a look inside Sai Dental Care
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "20px",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
+          {[
+            "/images/clinic-front.png",
+            "/images/clinic-room1.png",
+            "/images/clinic-room2.png",
+          ].map((img, index) => (
+            <div
+              key={index}
+              style={{
+                overflow: "hidden",
+                borderRadius: "18px",
+                boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+              }}
+            >
+              <img
+                src={img}
+                alt="Sai Dental Care"
+                style={{
+                  width: "100%",
+                  height: "280px",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* TESTIMONIAL */}
       <section style={{ padding: "70px 20px", textAlign: "center" }}>
         <h2>Happy Patients</h2>
-
         <div
           style={{
             maxWidth: "750px",
@@ -262,15 +301,12 @@ Notes: ${notes}`
           textAlign: "center",
         }}
       >
-        <h2 style={{ marginBottom: "15px" }}>Book an Appointment</h2>
-        <p style={{ marginBottom: "30px", color: "#475569" }}>
-          Schedule your dental consultation with Sai Dental Care
-        </p>
+        <h2>Book an Appointment</h2>
 
         <form
           style={{
             maxWidth: "600px",
-            margin: "0 auto",
+            margin: "30px auto",
             display: "flex",
             flexDirection: "column",
             gap: "15px",
@@ -280,49 +316,19 @@ Notes: ${notes}`
             boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
           }}
         >
-          <input
-            type="text"
-            placeholder="Patient Name"
-            style={inputStyle}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <input type="text" placeholder="Patient Name" style={inputStyle} value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="tel" placeholder="Phone Number" style={inputStyle} value={phone} onChange={(e) => setPhone(e.target.value)} />
+          <input type="date" style={inputStyle} value={date} onChange={(e) => setDate(e.target.value)} />
 
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            style={inputStyle}
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-
-          <input
-            type="date"
-            style={inputStyle}
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-
-          <select
-            style={inputStyle}
-            value={treatment}
-            onChange={(e) => setTreatment(e.target.value)}
-          >
+          <select style={inputStyle} value={treatment} onChange={(e) => setTreatment(e.target.value)}>
             <option value="">Select Treatment</option>
             <option>Root Canal</option>
             <option>Dental Implant</option>
             <option>Braces / Aligners</option>
             <option>Teeth Whitening</option>
-            <option>General Consultation</option>
           </select>
 
-          <textarea
-            rows="4"
-            placeholder="Additional Notes"
-            style={inputStyle}
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-          />
+          <textarea rows="4" placeholder="Additional Notes" style={inputStyle} value={notes} onChange={(e) => setNotes(e.target.value)} />
 
           <a
             href={whatsappMessage}
@@ -352,11 +358,7 @@ Notes: ${notes}`
         }}
       >
         <h2>Visit Sai Dental Care</h2>
-
-        <p>
-          Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar
-        </p>
-
+        <p>Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar</p>
         <p>📞 06744065359 | ✉️ saidentalcare2012@gmail.com</p>
 
         <a
