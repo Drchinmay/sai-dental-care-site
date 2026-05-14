@@ -429,7 +429,7 @@ Notes: ${notes}`
         <p>Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar</p>
         <p>📞 06744065359 | ✉️ saidentalcare2012@gmail.com</p>
 
-        <div
+       <div
   style={{
     marginTop: "25px",
     display: "flex",
@@ -438,7 +438,7 @@ Notes: ${notes}`
 >
   <iframe
     title="Sai Dental Care Location"
-    src="https://www.google.com/maps?q=Plot%20no%2079%20K-7%20Ghatikia%20Main%20Road%20Kalinganagar%20Bhubaneswar&z=18&output=embed"
+    src="https://www.google.com/maps?q=Sai%20Dental%20Care%2C%20Bhubaneswar&z=19&output=embed"
     width="550"
     height="230"
     style={{
@@ -448,12 +448,9 @@ Notes: ${notes}`
       maxWidth: "100%",
     }}
     loading="lazy"
-    allowFullScreen=""
-    referrerPolicy="no-referrer-when-downgrade"
+    allowFullScreen
   ></iframe>
 </div>
-      </section>
-    </div>
   );
 }
 
