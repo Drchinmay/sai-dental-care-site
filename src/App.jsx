@@ -333,27 +333,29 @@ Notes: ${notes}`
             onChange={(e) => setPhone(e.target.value)}
           />
           <input
-            type="date"
-            style={inputStyle}
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-          <select
+  type="date"
+  style={inputStyle}
+  value={date}
+  onChange={(e) => setDate(e.target.value)}
+/>
+
+<select
   style={inputStyle}
   value={treatment}
   onChange={(e) => setTreatment(e.target.value)}
 >
   <option value="">Select Treatment</option>
-  <option>General Consultation</option>
-  <option>Root Canal Treatment</option>
-  <option>Dental Implants</option>
-  <option>Braces / Aligners</option>
-  <option>Teeth Whitening</option>
-  <option>Wisdom Tooth Removal</option>
-  <option>Smile Design</option>
-  <option>Pediatric Dentistry</option>
-  <option>Dental Cleaning</option>
+  <option value="General Consultation">General Consultation</option>
+  <option value="Root Canal Treatment">Root Canal Treatment</option>
+  <option value="Dental Implants">Dental Implants</option>
+  <option value="Braces / Aligners">Braces / Aligners</option>
+  <option value="Teeth Whitening">Teeth Whitening</option>
+  <option value="Wisdom Tooth Removal">Wisdom Tooth Removal</option>
+  <option value="Smile Design">Smile Design</option>
+  <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+  <option value="Dental Cleaning">Dental Cleaning</option>
 </select>
+
           <textarea
             rows="4"
             placeholder="Additional Notes"
