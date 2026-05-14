@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
 function App() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [date, setDate] = useState("");
+  const [treatment, setTreatment] = useState("");
+  const [notes, setNotes] = useState("");
+
   const inputStyle = {
     padding: "14px",
     borderRadius: "10px",
@@ -8,12 +14,6 @@ function App() {
     fontSize: "16px",
     outline: "none",
   };
-
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [date, setDate] = useState("");
-  const [treatment, setTreatment] = useState("");
-  const [notes, setNotes] = useState("");
 
   const whatsappMessage = `https://wa.me/919439630471?text=${encodeURIComponent(
     `Hello Sai Dental Care,
@@ -27,8 +27,8 @@ Notes: ${notes}`
   )}`;
 
   return (
-    <div style={{ fontFamily: "'Poppins', sans-serif", margin: 0 }}>
-      {/* FLOATING WHATSAPP ICON */}
+    <div style={{ fontFamily: "Poppins, sans-serif", margin: 0 }}>
+      {/* Floating WhatsApp */}
       <a
         href="https://wa.me/919439630471"
         target="_blank"
@@ -42,41 +42,35 @@ Notes: ${notes}`
           height: "60px",
           borderRadius: "50%",
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
-          boxShadow: "0 10px 25px rgba(0,0,0,0.25)",
+          alignItems: "center",
+          textDecoration: "none",
+          fontSize: "28px",
+          color: "white",
+          boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
           zIndex: 1000,
         }}
       >
-        <img
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
-          alt="WhatsApp"
-          style={{
-            width: "30px",
-            height: "30px",
-            filter: "invert(1)",
-          }}
-        />
+        💬
       </a>
 
-      {/* HEADER */}
+      {/* Header */}
       <header
         style={{
+          background: "#0284c7",
+          color: "white",
+          padding: "18px 30px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "15px 40px",
-          background: "rgba(2,132,199,0.95)",
-          color: "white",
           position: "sticky",
           top: 0,
-          zIndex: 1000,
+          zIndex: 999,
         }}
       >
         <h2 style={{ margin: 0 }}>Sai Dental Care</h2>
-
         <a
-          href="https://wa.me/919439630471"
+          href="#appointment"
           style={{
             background: "white",
             color: "#0284c7",
@@ -90,27 +84,27 @@ Notes: ${notes}`
         </a>
       </header>
 
-      {/* HERO */}
+      {/* Hero */}
       <section
         style={{
+          minHeight: "90vh",
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')",
+            "url('https://images.unsplash.com/photo-1629909615184-74f495363b67')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "92vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          position: "relative",
+          textAlign: "center",
           padding: "20px",
+          position: "relative",
         }}
       >
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "rgba(0,0,0,0.55)",
-            backdropFilter: "blur(6px)",
+            background: "rgba(0,0,0,0.5)",
           }}
         />
 
@@ -118,81 +112,39 @@ Notes: ${notes}`
           style={{
             position: "relative",
             zIndex: 2,
-            maxWidth: "900px",
-            padding: "55px",
+            background: "rgba(255,255,255,0.12)",
+            backdropFilter: "blur(14px)",
+            padding: "50px",
             borderRadius: "24px",
-            background: "rgba(255,255,255,0.10)",
-            border: "1px solid rgba(255,255,255,0.2)",
-            backdropFilter: "blur(18px)",
-            textAlign: "center",
             color: "white",
+            maxWidth: "900px",
           }}
         >
-          <h1 style={{ fontSize: "54px", fontWeight: "900" }}>
+          <h1 style={{ fontSize: "52px", marginBottom: "20px" }}>
             Painless & Advanced Dental Care in Bhubaneswar
           </h1>
-
           <p style={{ fontSize: "20px", marginBottom: "30px" }}>
             Modern dentistry. Gentle hands. Confident smiles for life.
           </p>
 
           <a
-            href="https://wa.me/919439630471"
+            href="#appointment"
             style={{
               background: "#0ea5e9",
-              padding: "15px 30px",
-              borderRadius: "14px",
               color: "white",
+              padding: "14px 28px",
+              borderRadius: "12px",
               textDecoration: "none",
               fontWeight: "bold",
             }}
           >
-            Book Your Consultation
+            Book Consultation
           </a>
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* Services */}
       <section style={{ padding: "70px 20px", textAlign: "center" }}>
-        <h2>Why Patients Trust Us</h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-            gap: "20px",
-            marginTop: "30px",
-          }}
-        >
-          {[
-            "Painless Treatments",
-            "Expert Dentists",
-            "Modern Technology",
-            "Hygienic Clinic",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                padding: "22px",
-                borderRadius: "14px",
-                background: "#f8fafc",
-                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-              }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section
-        style={{
-          padding: "70px 20px",
-          background: "#f1f5f9",
-          textAlign: "center",
-        }}
-      >
         <h2>Our Dental Services</h2>
 
         <div
@@ -210,13 +162,13 @@ Notes: ${notes}`
             "Teeth Whitening",
             "Smile Design",
             "General Dentistry",
-          ].map((service) => (
+          ].map((service, index) => (
             <div
-              key={service}
+              key={index}
               style={{
                 padding: "22px",
+                background: "#f8fafc",
                 borderRadius: "14px",
-                background: "white",
                 boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
               }}
             >
@@ -226,26 +178,16 @@ Notes: ${notes}`
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section
-        style={{
-          padding: "70px 20px",
-          background: "white",
-          textAlign: "center",
-        }}
-      >
+      {/* Gallery */}
+      <section style={{ padding: "70px 20px", textAlign: "center" }}>
         <h2>Our Clinic Gallery</h2>
-        <p style={{ marginBottom: "35px", color: "#64748b" }}>
-          Take a look inside Sai Dental Care
-        </p>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
             gap: "20px",
-            maxWidth: "1200px",
-            margin: "0 auto",
+            marginTop: "30px",
           }}
         >
           {[
@@ -253,115 +195,23 @@ Notes: ${notes}`
             "/images/clinic-room1.png",
             "/images/clinic-room2.png",
           ].map((img, index) => (
-            <div
+            <img
               key={index}
+              src={img}
+              alt="clinic"
               style={{
-                overflow: "hidden",
-                borderRadius: "18px",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+                width: "100%",
+                height: "280px",
+                objectFit: "cover",
+                borderRadius: "16px",
+                boxShadow: "0 8px 22px rgba(0,0,0,0.08)",
               }}
-            >
-              <img
-                src={img}
-                alt="Sai Dental Care"
-                style={{
-                  width: "100%",
-                  height: "280px",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
+            />
           ))}
         </div>
       </section>
 
-    
-      {/* PATIENT REVIEWS */}
-{/* PATIENT REVIEWS */}
-<section
-  style={{
-    padding: "70px 20px",
-    textAlign: "center",
-    background: "#f8fafc",
-  }}
->
-  <h2 style={{ marginBottom: "12px" }}>What Our Patients Say</h2>
-  <p style={{ color: "#64748b", marginBottom: "35px" }}>
-    Trusted by families across Bhubaneswar
-  </p>
-
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-      gap: "25px",
-      maxWidth: "1200px",
-      margin: "0 auto",
-    }}
-  >
-    {[
-      {
-        name: "Santoshi",
-        review:
-          "Very nice and calm environment to have your treatment. Interiors are clean and ambience is good. Doctors are very professional and well behaved.",
-      },
-      {
-        name: "Debasish",
-        review:
-          "Amazing experience with Sai Dental Care. Dr Chinmaya Nayak and staff were very helpful and my root canal treatment was successful.",
-      },
-      {
-        name: "Shalem",
-        review:
-          "Got my wisdom tooth removed at Sai Dental Care. The doctor did it smoothly and without pain. Had a very good experience.",
-      },
-      {
-        name: "Sunil",
-        review:
-          "I got my braces treatment done here and I am very happy with the results. I can clearly see the changes now. Fully satisfied with the treatment.",
-      },
-      {
-        name: "Sumit",
-        review:
-          "Excellent dental care experience. Professional and friendly staff, clean clinic, well-maintained environment and calming atmosphere.",
-      },
-      {
-        name: "Rachna",
-        review:
-          "Very polite and professional doctor. Support staff is excellent too.",
-      },
-      {
-        name: "Anjali",
-        review:
-          "Thrilled with the results of my braces treatment. My smile looks great now. Expertise and care made the whole process smooth and successful.",
-      },
-    ].map((item, index) => (
-      <div
-        key={index}
-        style={{
-          background: "white",
-          padding: "28px",
-          borderRadius: "18px",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
-          textAlign: "left",
-        }}
-      >
-        <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
-
-        <p style={{ color: "#334155", lineHeight: "1.8" }}>
-          {item.review}
-        </p>
-
-        <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
-          {item.name}
-        </h4>
-      </div>
-    ))}
-  </div>
-</section>
-
-      {/* APPOINTMENT FORM */}
+      {/* Reviews */}
       <section
         style={{
           padding: "70px 20px",
@@ -369,7 +219,46 @@ Notes: ${notes}`
           textAlign: "center",
         }}
       >
-        <h2>Book an Appointment</h2>
+        <h2>What Our Patients Say</h2>
+
+        <div
+          style={{
+            maxWidth: "900px",
+            margin: "30px auto",
+            display: "grid",
+            gap: "20px",
+          }}
+        >
+          {[
+            "Very nice and calm environment. Doctors are very professional and well behaved.",
+            "Amazing experience with Sai Dental Care. Root canal treatment was successful.",
+            "Got my wisdom tooth removed smoothly and without pain.",
+          ].map((review, index) => (
+            <div
+              key={index}
+              style={{
+                background: "white",
+                padding: "24px",
+                borderRadius: "16px",
+                boxShadow: "0 8px 22px rgba(0,0,0,0.08)",
+              }}
+            >
+              <div style={{ marginBottom: "10px" }}>★★★★★</div>
+              {review}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Appointment */}
+      <section
+        id="appointment"
+        style={{
+          padding: "70px 20px",
+          textAlign: "center",
+        }}
+      >
+        <h2>Book Appointment</h2>
 
         <form
           style={{
@@ -378,25 +267,46 @@ Notes: ${notes}`
             display: "flex",
             flexDirection: "column",
             gap: "15px",
-            background: "white",
+            background: "#fff",
             padding: "35px",
             borderRadius: "18px",
             boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
           }}
         >
-          <input type="text" placeholder="Patient Name" style={inputStyle} value={name} onChange={(e) => setName(e.target.value)} />
-          <input type="tel" placeholder="Phone Number" style={inputStyle} value={phone} onChange={(e) => setPhone(e.target.value)} />
-          <input type="date" style={inputStyle} value={date} onChange={(e) => setDate(e.target.value)} />
-
-          <select style={inputStyle} value={treatment} onChange={(e) => setTreatment(e.target.value)}>
-            <option value="">Select Treatment</option>
-            <option>Root Canal</option>
-            <option>Dental Implant</option>
-            <option>Braces / Aligners</option>
-            <option>Teeth Whitening</option>
-          </select>
-
-          <textarea rows="4" placeholder="Additional Notes" style={inputStyle} value={notes} onChange={(e) => setNotes(e.target.value)} />
+          <input
+            type="text"
+            placeholder="Patient Name"
+            style={inputStyle}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            style={inputStyle}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+          <input
+            type="date"
+            style={inputStyle}
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Treatment"
+            style={inputStyle}
+            value={treatment}
+            onChange={(e) => setTreatment(e.target.value)}
+          />
+          <textarea
+            rows="4"
+            placeholder="Additional Notes"
+            style={inputStyle}
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+          />
 
           <a
             href={whatsappMessage}
@@ -416,7 +326,7 @@ Notes: ${notes}`
         </form>
       </section>
 
-      {/* CONTACT */}
+      {/* Contact */}
       <section
         style={{
           padding: "70px 20px",
@@ -429,24 +339,25 @@ Notes: ${notes}`
         <p>Plot No 79, K7, Kalinga Nagar Main Road, Ghatikia, Bhubaneswar</p>
         <p>📞 06744065359 | ✉️ saidentalcare2012@gmail.com</p>
 
-      <a
-  href="https://maps.app.goo.gl/T6ppH64dH3G8jp5WA?g_st=ic"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: "inline-block",
-    marginTop: "20px",
-    background: "#ffffff",
-    color: "#0284c7",
-    padding: "14px 24px",
-    borderRadius: "12px",
-    textDecoration: "none",
-    fontWeight: "bold",
-    boxShadow: "0 6px 18px rgba(0,0,0,0.12)",
-  }}
->
-  📍 View Sai Dental Care on Google Maps
-</a>
+        <a
+          href="https://maps.app.goo.gl/T6ppH64dH3G8jp5WA?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            marginTop: "20px",
+            background: "white",
+            color: "#0284c7",
+            padding: "14px 24px",
+            borderRadius: "12px",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          📍 View Sai Dental Care on Google Maps
+        </a>
+      </section>
+    </div>
   );
 }
 
