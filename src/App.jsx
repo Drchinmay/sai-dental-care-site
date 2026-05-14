@@ -236,12 +236,12 @@ Notes: ${notes}`
   >
     {[
       {
-        name: "Santoshi Kusiya",
+        name: "Santoshi",
         review:
           "Very nice and calm environment to have your treatment. Interiors are clean, ambience is excellent, and doctors are highly professional.",
       },
       {
-        name: "Debasish Pasupalak",
+        name: "Debasish",
         review:
           "Amazing experience with Sai Dental Care. Dr Chinmaya Nayak and staff were very helpful and my root canal treatment was successful.",
       },
