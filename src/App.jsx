@@ -276,8 +276,9 @@ Notes: ${notes}`
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
+    
       {/* PATIENT REVIEWS */}
+{/* PATIENT REVIEWS */}
 <section
   style={{
     padding: "70px 20px",
@@ -295,54 +296,68 @@ Notes: ${notes}`
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
       gap: "25px",
-      maxWidth: "1100px",
+      maxWidth: "1200px",
       margin: "0 auto",
     }}
   >
-    <div
-      style={{
-        background: "white",
-        padding: "28px",
-        borderRadius: "18px",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
-        textAlign: "left",
-      }}
-    >
-      <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
+    {[
+      {
+        name: "Santoshi Kusiya",
+        review:
+          "Very nice and calm environment to have your treatment. Interiors are clean and ambience is good. Doctors are very professional and well behaved.",
+      },
+      {
+        name: "Debasish Pasupalak",
+        review:
+          "Amazing experience with Sai Dental Care. Dr Chinmaya Nayak and staff were very helpful and my root canal treatment was successful.",
+      },
+      {
+        name: "Shalem",
+        review:
+          "Got my wisdom tooth removed at Sai Dental Care. The doctor did it smoothly and without pain. Had a very good experience.",
+      },
+      {
+        name: "Sunil",
+        review:
+          "I got my braces treatment done here and I am very happy with the results. I can clearly see the changes now. Fully satisfied with the treatment.",
+      },
+      {
+        name: "Sumit",
+        review:
+          "Excellent dental care experience. Professional and friendly staff, clean clinic, well-maintained environment and calming atmosphere.",
+      },
+      {
+        name: "Rachna",
+        review:
+          "Very polite and professional doctor. Support staff is excellent too.",
+      },
+      {
+        name: "Anjali",
+        review:
+          "Thrilled with the results of my braces treatment. My smile looks great now. Expertise and care made the whole process smooth and successful.",
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        style={{
+          background: "white",
+          padding: "28px",
+          borderRadius: "18px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+          textAlign: "left",
+        }}
+      >
+        <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
 
-      <p style={{ color: "#334155", lineHeight: "1.8" }}>
-        Very nice and calm environment to have your treatment. Interiors
-        are clean and ambience is good. Doctors are very professional and
-        well behaved. I did my teeth filling under Dr Itishree ma’am.
-        Her behaviour was very polite and good.
-      </p>
+        <p style={{ color: "#334155", lineHeight: "1.8" }}>
+          {item.review}
+        </p>
 
-      <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
-        Santoshi
-      </h4>
-    </div>
-
-    <div
-      style={{
-        background: "white",
-        padding: "28px",
-        borderRadius: "18px",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
-        textAlign: "left",
-      }}
-    >
-      <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
-
-      <p style={{ color: "#334155", lineHeight: "1.8" }}>
-        It was an amazing experience with Sai Dental Care. Dr Chinmaya
-        Nayak and his staff were very helpful, and my root canal
-        treatment was successful.
-      </p>
-
-      <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
-        Debasish
-      </h4>
-    </div>
+        <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
+          {item.name}
+        </h4>
+      </div>
+    ))}
   </div>
 </section>
 
