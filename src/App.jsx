@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
   const inputStyle = {
@@ -9,9 +9,25 @@ function App() {
     outline: "none",
   };
 
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [date, setDate] = useState("");
+  const [treatment, setTreatment] = useState("");
+  const [notes, setNotes] = useState("");
+
+  const whatsappMessage = `https://wa.me/919439630471?text=${encodeURIComponent(
+    `Hello Sai Dental Care,
+Appointment Booking Request
+
+Patient Name: ${name}
+Phone: ${phone}
+Preferred Date: ${date}
+Treatment: ${treatment}
+Notes: ${notes}`
+  )}`;
+
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif", margin: 0 }}>
-      
       {/* FLOATING WHATSAPP ICON */}
       <a
         href="https://wa.me/919439630471"
@@ -74,7 +90,7 @@ function App() {
         </a>
       </header>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section
         style={{
           backgroundImage:
@@ -163,9 +179,9 @@ function App() {
             "Expert Dentists",
             "Modern Technology",
             "Hygienic Clinic",
-          ].map((t) => (
+          ].map((item) => (
             <div
-              key={t}
+              key={item}
               style={{
                 padding: "22px",
                 borderRadius: "14px",
@@ -173,7 +189,7 @@ function App() {
                 boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
               }}
             >
-              {t}
+              {item}
             </div>
           ))}
         </div>
@@ -204,9 +220,9 @@ function App() {
             "Teeth Whitening",
             "Smile Design",
             "General Dentistry",
-          ].map((s) => (
+          ].map((service) => (
             <div
-              key={s}
+              key={service}
               style={{
                 padding: "22px",
                 borderRadius: "14px",
@@ -214,7 +230,7 @@ function App() {
                 boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
               }}
             >
-              {s}
+              {service}
             </div>
           ))}
         </div>
@@ -264,12 +280,35 @@ function App() {
             boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
           }}
         >
-          <input type="text" placeholder="Patient Name" style={inputStyle} />
-          <input type="tel" placeholder="Phone Number" style={inputStyle} />
-          <input type="date" style={inputStyle} />
+          <input
+            type="text"
+            placeholder="Patient Name"
+            style={inputStyle}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-          <select style={inputStyle}>
-            <option>Select Treatment</option>
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            style={inputStyle}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+
+          <input
+            type="date"
+            style={inputStyle}
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+
+          <select
+            style={inputStyle}
+            value={treatment}
+            onChange={(e) => setTreatment(e.target.value)}
+          >
+            <option value="">Select Treatment</option>
             <option>Root Canal</option>
             <option>Dental Implant</option>
             <option>Braces / Aligners</option>
@@ -281,10 +320,14 @@ function App() {
             rows="4"
             placeholder="Additional Notes"
             style={inputStyle}
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
           />
 
           <a
-            href="https://wa.me/919439630471"
+            href={whatsappMessage}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               background: "#0284c7",
               color: "white",
