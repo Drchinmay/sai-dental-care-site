@@ -212,43 +212,88 @@ Notes: ${notes}`
       </section>
 
       {/* Reviews */}
-      <section
+      {/* Reviews */}
+<section
+  style={{
+    padding: "70px 20px",
+    background: "#f8fafc",
+    textAlign: "center",
+  }}
+>
+  <h2>What Our Patients Say</h2>
+  <p style={{ color: "#64748b", marginBottom: "35px" }}>
+    Trusted by families across Bhubaneswar
+  </p>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+      gap: "25px",
+      maxWidth: "1200px",
+      margin: "30px auto",
+    }}
+  >
+    {[
+      {
+        name: "Santoshi Kusiya",
+        review:
+          "Very nice and calm environment to have your treatment. Interiors are clean, ambience is excellent, and doctors are highly professional.",
+      },
+      {
+        name: "Debasish Pasupalak",
+        review:
+          "Amazing experience with Sai Dental Care. Dr Chinmaya Nayak and staff were very helpful and my root canal treatment was successful.",
+      },
+      {
+        name: "Shalem",
+        review:
+          "Got my wisdom tooth removed smoothly and without pain. Had a very good experience.",
+      },
+      {
+        name: "Sunil",
+        review:
+          "Got my braces treatment done here and I am very happy with the results. Fully satisfied with the treatment.",
+      },
+      {
+        name: "Sumit",
+        review:
+          "Excellent dental care experience. Professional staff, clean clinic and calming atmosphere.",
+      },
+      {
+        name: "Rachna",
+        review:
+          "Very polite and professional doctor. Support staff is excellent too.",
+      },
+      {
+        name: "Anjali",
+        review:
+          "Thrilled with my braces treatment results. My smile looks great now and the whole process was smooth.",
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
         style={{
-          padding: "70px 20px",
-          background: "#f8fafc",
-          textAlign: "center",
+          background: "white",
+          padding: "28px",
+          borderRadius: "18px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+          textAlign: "left",
         }}
       >
-        <h2>What Our Patients Say</h2>
+        <div style={{ fontSize: "22px", marginBottom: "12px" }}>★★★★★</div>
 
-        <div
-          style={{
-            maxWidth: "900px",
-            margin: "30px auto",
-            display: "grid",
-            gap: "20px",
-          }}
-        >
-          {[
-            "Very nice and calm environment. Doctors are very professional and well behaved.",
-            "Amazing experience with Sai Dental Care. Root canal treatment was successful.",
-            "Got my wisdom tooth removed smoothly and without pain.",
-          ].map((review, index) => (
-            <div
-              key={index}
-              style={{
-                background: "white",
-                padding: "24px",
-                borderRadius: "16px",
-                boxShadow: "0 8px 22px rgba(0,0,0,0.08)",
-              }}
-            >
-              <div style={{ marginBottom: "10px" }}>★★★★★</div>
-              {review}
-            </div>
-          ))}
-        </div>
-      </section>
+        <p style={{ color: "#334155", lineHeight: "1.8" }}>
+          {item.review}
+        </p>
+
+        <h4 style={{ marginTop: "20px", color: "#0284c7" }}>
+          {item.name}
+        </h4>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* Appointment */}
       <section
