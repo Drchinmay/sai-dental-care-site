@@ -338,13 +338,22 @@ Notes: ${notes}`
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
-          <input
-            type="text"
-            placeholder="Treatment"
-            style={inputStyle}
-            value={treatment}
-            onChange={(e) => setTreatment(e.target.value)}
-          />
+          <select
+  style={inputStyle}
+  value={treatment}
+  onChange={(e) => setTreatment(e.target.value)}
+>
+  <option value="">Select Treatment</option>
+  <option>General Consultation</option>
+  <option>Root Canal Treatment</option>
+  <option>Dental Implants</option>
+  <option>Braces / Aligners</option>
+  <option>Teeth Whitening</option>
+  <option>Wisdom Tooth Removal</option>
+  <option>Smile Design</option>
+  <option>Pediatric Dentistry</option>
+  <option>Dental Cleaning</option>
+</select>
           <textarea
             rows="4"
             placeholder="Additional Notes"
