@@ -37,65 +37,81 @@ function App() {
 
       {/* HERO SECTION */}
       <section
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "90vh",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          color: "white",
-          padding: "20px",
-        }}
-      >
-        {/* Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundColor: "rgba(0,0,0,0.6)",
-            backdropFilter: "blur(5px)",
-          }}
-        />
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "90vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+    padding: "20px",
+  }}
+>
+  {/* Dark + blur overlay */}
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      backgroundColor: "rgba(0,0,0,0.55)",
+      backdropFilter: "blur(6px)",
+    }}
+  />
 
-        {/* HERO CONTENT */}
-        <div style={{ position: "relative", maxWidth: "900px", zIndex: 2 }}>
-          
-          {/* H1 (SEO MAIN TITLE) */}
-          <h1
-            style={{
-              fontSize: "52px",
-              fontWeight: "800",
-              marginBottom: "20px",
-              lineHeight: "1.2",
-            }}
-          >
-            Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
-          </h1>
+  {/* GLASS CARD */}
+  <div
+    style={{
+      position: "relative",
+      zIndex: 2,
+      maxWidth: "900px",
+      padding: "50px",
+      borderRadius: "20px",
+      background: "rgba(255,255,255,0.10)",
+      border: "1px solid rgba(255,255,255,0.2)",
+      backdropFilter: "blur(15px)",
+      WebkitBackdropFilter: "blur(15px)",
+      textAlign: "center",
+      color: "white",
+      boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+    }}
+  >
+    {/* H1 */}
+    <h1
+      style={{
+        fontSize: "52px",
+        fontWeight: "800",
+        lineHeight: "1.2",
+        marginBottom: "20px",
+        fontFamily: "'Poppins', 'Segoe UI', sans-serif",
+        textShadow: "0 4px 20px rgba(0,0,0,0.4)",
+      }}
+    >
+      Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
+    </h1>
 
-          <p style={{ fontSize: "20px", marginBottom: "25px" }}>
-            Gentle treatment. Modern technology. Confident smiles.
-          </p>
+    <p style={{ fontSize: "20px", marginBottom: "30px", opacity: 0.9 }}>
+      Gentle treatment, modern technology, and confident smiles for every patient.
+    </p>
 
-          <a
-            href="https://wa.me/919439630471"
-            style={{
-              backgroundColor: "#0ea5e9",
-              color: "white",
-              padding: "14px 26px",
-              borderRadius: "10px",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
-            Book Your Visit
-          </a>
-        </div>
-      </section>
+    <a
+      href="https://wa.me/919439630471"
+      style={{
+        display: "inline-block",
+        background: "#0ea5e9",
+        color: "white",
+        padding: "14px 28px",
+        borderRadius: "12px",
+        textDecoration: "none",
+        fontWeight: "bold",
+        boxShadow: "0 4px 15px rgba(14,165,233,0.4)",
+      }}
+    >
+      Book Appointment
+    </a>
+  </div>
+</section>
 
       {/* WHY CHOOSE US */}
       <section style={{ padding: "60px 20px", textAlign: "center" }}>
