@@ -4,6 +4,26 @@ function App() {
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif", margin: 0 }}>
 
+      {/* FLOATING WHATSAPP BUTTON */}
+      <a
+        href="https://wa.me/919439630471"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          background: "#25D366",
+          color: "white",
+          padding: "14px 18px",
+          borderRadius: "50px",
+          textDecoration: "none",
+          fontWeight: "bold",
+          boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
+          zIndex: 1000,
+        }}
+      >
+        WhatsApp
+      </a>
+
       {/* HEADER */}
       <header
         style={{
@@ -11,7 +31,7 @@ function App() {
           justifyContent: "space-between",
           alignItems: "center",
           padding: "15px 40px",
-          backgroundColor: "#0284c7",
+          background: "rgba(2,132,199,0.95)",
           color: "white",
           position: "sticky",
           top: 0,
@@ -26,7 +46,7 @@ function App() {
             background: "white",
             color: "#0284c7",
             padding: "10px 18px",
-            borderRadius: "8px",
+            borderRadius: "10px",
             textDecoration: "none",
             fontWeight: "bold",
           }}
@@ -35,87 +55,83 @@ function App() {
         </a>
       </header>
 
-      {/* HERO SECTION */}
+      {/* HERO - ULTRA PREMIUM GLASS STYLE */}
       <section
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    minHeight: "90vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    padding: "20px",
-  }}
->
-  {/* Dark + blur overlay */}
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      backgroundColor: "rgba(0,0,0,0.55)",
-      backdropFilter: "blur(6px)",
-    }}
-  />
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "92vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+          padding: "20px",
+        }}
+      >
+        {/* overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0,0,0,0.55)",
+            backdropFilter: "blur(6px)",
+          }}
+        />
 
-  {/* GLASS CARD */}
-  <div
-    style={{
-      position: "relative",
-      zIndex: 2,
-      maxWidth: "900px",
-      padding: "50px",
-      borderRadius: "20px",
-      background: "rgba(255,255,255,0.10)",
-      border: "1px solid rgba(255,255,255,0.2)",
-      backdropFilter: "blur(15px)",
-      WebkitBackdropFilter: "blur(15px)",
-      textAlign: "center",
-      color: "white",
-      boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
-    }}
-  >
-    {/* H1 */}
-    <h1
-      style={{
-        fontSize: "52px",
-        fontWeight: "800",
-        lineHeight: "1.2",
-        marginBottom: "20px",
-        fontFamily: "'Poppins', 'Segoe UI', sans-serif",
-        textShadow: "0 4px 20px rgba(0,0,0,0.4)",
-      }}
-    >
-      Painless & Advanced Dental Care in Bhubaneswar – Sai Dental Care
-    </h1>
+        {/* glass card */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            maxWidth: "900px",
+            padding: "55px",
+            borderRadius: "24px",
+            background: "rgba(255,255,255,0.10)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            backdropFilter: "blur(18px)",
+            WebkitBackdropFilter: "blur(18px)",
+            textAlign: "center",
+            color: "white",
+            boxShadow: "0 10px 40px rgba(0,0,0,0.35)",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "54px",
+              fontWeight: "900",
+              lineHeight: "1.2",
+              marginBottom: "20px",
+            }}
+          >
+            Painless & Advanced Dental Care in Bhubaneswar
+          </h1>
 
-    <p style={{ fontSize: "20px", marginBottom: "30px", opacity: 0.9 }}>
-      Gentle treatment, modern technology, and confident smiles for every patient.
-    </p>
+          <p style={{ fontSize: "20px", marginBottom: "30px", opacity: 0.9 }}>
+            Modern dentistry. Gentle hands. Confident smiles for life.
+          </p>
 
-    <a
-      href="https://wa.me/919439630471"
-      style={{
-        display: "inline-block",
-        background: "#0ea5e9",
-        color: "white",
-        padding: "14px 28px",
-        borderRadius: "12px",
-        textDecoration: "none",
-        fontWeight: "bold",
-        boxShadow: "0 4px 15px rgba(14,165,233,0.4)",
-      }}
-    >
-      Book Appointment
-    </a>
-  </div>
-</section>
+          <a
+            href="https://wa.me/919439630471"
+            style={{
+              background: "#0ea5e9",
+              padding: "15px 30px",
+              borderRadius: "14px",
+              color: "white",
+              textDecoration: "none",
+              fontWeight: "bold",
+              boxShadow: "0 8px 25px rgba(14,165,233,0.4)",
+            }}
+          >
+            Book Your Consultation
+          </a>
+        </div>
+      </section>
 
-      {/* WHY CHOOSE US */}
-      <section style={{ padding: "60px 20px", textAlign: "center" }}>
-        <h2>Why Choose Sai Dental Care?</h2>
+      {/* FEATURES */}
+      <section style={{ padding: "70px 20px", textAlign: "center" }}>
+        <h2>Why Patients Trust Us</h2>
 
         <div
           style={{
@@ -126,20 +142,21 @@ function App() {
           }}
         >
           {[
-            "Painless Treatment",
-            "Experienced Dentists",
-            "Modern Equipment",
+            "Painless Treatments",
+            "Expert Dentists",
+            "Modern Technology",
             "Hygienic Clinic",
-          ].map((item) => (
+          ].map((t) => (
             <div
-              key={item}
+              key={t}
               style={{
-                padding: "20px",
+                padding: "22px",
+                borderRadius: "14px",
                 background: "#f8fafc",
-                borderRadius: "12px",
+                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
               }}
             >
-              {item}
+              {t}
             </div>
           ))}
         </div>
@@ -147,7 +164,11 @@ function App() {
 
       {/* SERVICES */}
       <section
-        style={{ padding: "60px 20px", background: "#f1f5f9", textAlign: "center" }}
+        style={{
+          padding: "70px 20px",
+          background: "#f1f5f9",
+          textAlign: "center",
+        }}
       >
         <h2>Our Dental Services</h2>
 
@@ -162,7 +183,7 @@ function App() {
           {[
             "Root Canal",
             "Dental Implants",
-            "Braces",
+            "Braces & Aligners",
             "Teeth Whitening",
             "Smile Design",
             "General Dentistry",
@@ -170,9 +191,10 @@ function App() {
             <div
               key={s}
               style={{
+                padding: "22px",
+                borderRadius: "14px",
                 background: "white",
-                padding: "20px",
-                borderRadius: "12px",
+                boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
               }}
             >
               {s}
@@ -181,27 +203,32 @@ function App() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section style={{ padding: "60px 20px", textAlign: "center" }}>
-        <h2>Patient Testimonials</h2>
+      {/* TESTIMONIAL */}
+      <section style={{ padding: "70px 20px", textAlign: "center" }}>
+        <h2>Happy Patients</h2>
 
         <div
           style={{
-            maxWidth: "700px",
+            maxWidth: "750px",
             margin: "30px auto",
-            background: "#fff",
-            padding: "25px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+            padding: "30px",
+            borderRadius: "16px",
+            background: "white",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
           }}
         >
-          “Very painless treatment and friendly doctors. Highly recommended!”
+          “One of the best dental clinics in Bhubaneswar. Very painless treatment and friendly doctors.”
         </div>
       </section>
 
       {/* CONTACT */}
       <section
-        style={{ padding: "60px 20px", background: "#0f172a", color: "white", textAlign: "center" }}
+        style={{
+          padding: "70px 20px",
+          background: "#0f172a",
+          color: "white",
+          textAlign: "center",
+        }}
       >
         <h2>Visit Sai Dental Care</h2>
 
@@ -213,12 +240,15 @@ function App() {
 
         <a
           href="https://maps.app.goo.gl/T6ppH64dH3G8jp5WA?g_st=ic"
-          style={{ color: "#38bdf8", textDecoration: "none", fontWeight: "bold" }}
+          style={{
+            color: "#38bdf8",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
         >
           View on Google Maps
         </a>
       </section>
-
     </div>
   );
 }
